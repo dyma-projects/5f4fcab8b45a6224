@@ -7,13 +7,17 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class Exercice2Component implements OnInit {
 
-  @ViewChild('v') public el: ElementRef;
   public valeur: string;
+  @ViewChild('v') public el: ElementRef;
 
   constructor() {
    }
 
   ngOnInit() {
+  }
+
+  public valueInput() {
+    this.valeur = this.el.nativeElement.value;
   }
 
 }
